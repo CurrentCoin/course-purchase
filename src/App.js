@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Coursesales from './Coursesales';
 
 class App extends Component {
-  render() {
+    render() {
+	var courses = [
+	    { name: 'iOS Development', price: 199 },
+	    { name: 'Security Basics', price: 299 },
+	    { name: 'JavaScript Fundamentals', price: 180 },
+	    { name: 'React and Redux', price: 190 }
+	    ]
+	    
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+	    <Coursesales items={courses} />
       </div>
     );
   }
